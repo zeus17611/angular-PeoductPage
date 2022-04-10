@@ -1,0 +1,14 @@
+<h2>Products</h2>
+
+<div *ngFor="let p of products">
+  <h4>
+    Available Models: {{ p.id }}<br />
+    <a [title]="p.description">{{ p.name }}</a><br />{{ p.price }}<br>
+    <button type="button" (click)="buy()">Buy</button>...............
+    <button type="button" (click)="userRev()"> User Reiews</button>
+  </h4>
+</div>
+<app-product-alerts (notify)="onNotify()">
+
+</app-product-alerts>
+
